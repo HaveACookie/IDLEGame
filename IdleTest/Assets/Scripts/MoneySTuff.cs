@@ -26,6 +26,11 @@ public class MoneySTuff : MonoBehaviour
     public Text realProductionText;
     public Text surplusText;
 
+    private float time = 0.0f;
+    private float nextActionTime = 0.0f;
+    public float period = 0.01f;
+   
+
       
    
     // Start is called before the first frame update
@@ -39,49 +44,63 @@ public class MoneySTuff : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moneyText.text  = GameManager.Instance.Money + " " + "Dollars";
-        soldText.text = sold + "Sandwhiches Sold";
-        farmText.text = GameManager.Instance.Farms + "Farms " + "Buy Another for" + " " + GameManager.Instance.FarmPrice;
-        storeText.text = GameManager.Instance.Stores + "Stores " + "Buy Another for" + " " + GameManager.Instance.StorePrice;
-        truckText.text = GameManager.Instance.Trucks + "Trucks" + "Buy Another for" + " " + GameManager.Instance.TruckPrice;
-        cookText.text = "Cook/Sell 1 Burger at home ";
-        sellingText.text = "Selling " + selling + " per second";
-        rawProductionText.text = "raw Production " + rawProduction;
-        realProductionText.text = "real Production  " + realProduction;
-        surplusText.text = "Surplus " + surplus;
-
- 
-        rawProduction += (GameManager.Instance.Farms * 10);
-        maxCanTransport = (GameManager.Instance.Trucks * 100);
-        maxCanSell = (GameManager.Instance.Stores * 200);
-
-        if (rawProduction > maxCanTransport)
+        if (Time.time > nextActionTime)
         {
-            surplus += rawProduction - maxCanTransport;
-            realProduction = maxCanTransport;
-            
-        }
-        if(rawProduction <= maxCanTransport)
-        {
-            realProduction = rawProduction;
-        }
-        if(maxCanTransport > maxCanSell)
-        {
-            surplus += maxCanSell - maxCanTransport;
-            //sold += maxCanSell;
-            selling += maxCanSell;
-        }
-        if(maxCanTransport <= maxCanSell)
-        {
-            //sold += maxCanTransport;
-            selling += maxCanTransport;
-        }
+            nextActionTime = Time.time + period;
 
-        
-        GameManager.Instance.Money += selling * 5;
+            moneyText.text = GameManager.Instance.Money + " " + "Dollars";
+            soldText.text = sold + "Sandwhiches Sold";
+            farmText.text = GameManager.Instance.Farms + "Farms " + "Buy Another for" + " " + GameManager.Instance.FarmPrice;
+            storeText.text = GameManager.Instance.Stores + "Stores " + "Buy Another for" + " " + GameManager.Instance.StorePrice;
+            truckText.text = GameManager.Instance.LTrucks + "Trucks" + "Buy Another for" + " " + GameManager.Instance.TruckPrice;
+            cookText.text = "Cook/Sell 1 Burger at home ";
+            sellingText.text = "Selling " + selling + " per second";
+            rawProductionText.text = "raw Production " + rawProduction;
+            realProductionText.text = "real Production  " + realProduction;
+            surplusText.text = "Surplus " + surplus;
 
-        sold += selling;
 
+            rawProduction = (GameManager.Instance.Farms * 10);
+            maxCanTransport = (GameManager.Instance.LTrucks * 100);
+            maxCanSell = (GameManager.Instance.Stores * 200);
+
+            if (rawProduction > maxCanTransport)
+            {
+                //surplus += rawProduction - maxCanTransport;
+                realProduction = maxCanTransport;
+
+            }
+            if (rawProduction <= maxCanTransport)
+            {
+                realProduction = rawProduction;
+            }
+            if (maxCanTransport > maxCanSell)
+            {
+                //surplus += maxCanSell - maxCanTransport;
+                //sold += maxCanSell;
+                selling = maxCanSell;
+            }
+            if (maxCanTransport <= maxCanSell)
+            {
+                //sold += maxCanTransport;
+                selling = maxCanTransport;
+            }
+
+
+            GameManager.Instance.Money += selling * 5;
+
+            sold += selling;
+
+        }
+    }
+
+    IEnumerator gameRunner()
+    {
+        for(; ;)
+        {
+
+            yield return new WaitForSeconds(1f);
+        }
     }
 
      public void farmButton()
@@ -97,7 +116,7 @@ public class MoneySTuff : MonoBehaviour
     {
         if (GameManager.Instance.Money >= GameManager.Instance.TruckPrice)
         {
-            GameManager.Instance.Trucks += 1;
+            GameManager.Instance.LTrucks += 1;
             GameManager.Instance.TruckPrice = (GameManager.Instance.TruckPrice * 1.1);
         }
 

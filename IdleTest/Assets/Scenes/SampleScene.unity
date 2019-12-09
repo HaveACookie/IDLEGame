@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 190, y: -15}
+  m_AnchoredPosition: {x: 190, y: 116}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &229357018
@@ -189,7 +189,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'Real Production
+
+'
 --- !u!222 &229357019
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -247,7 +249,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Selling per second
 --- !u!222 &267628181
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -272,7 +274,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 190, y: -67}
+  m_AnchoredPosition: {x: 190, y: 72.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &312568240
@@ -471,7 +473,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -173.4, y: 15}
+  m_AnchoredPosition: {x: -213.4, y: 78.5}
   m_SizeDelta: {x: 213.2, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &553933879
@@ -598,7 +600,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 190, y: 87}
+  m_AnchoredPosition: {x: 190, y: 207}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &593054057
@@ -632,7 +634,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'Burgers Sold '
 --- !u!222 &593054058
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -677,7 +679,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -173.42, y: 71}
+  m_AnchoredPosition: {x: -213.38, y: 120.7}
   m_SizeDelta: {x: 213.25, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &650345711
@@ -981,6 +983,7 @@ MonoBehaviour:
   rawProductionText: {fileID: 1508751905}
   realProductionText: {fileID: 229357018}
   surplusText: {fileID: 1618265678}
+  period: 0.1
 --- !u!1 &1163583969
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,7 +1020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: 135}
+  m_AnchoredPosition: {x: -240, y: 162.8}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1163583971
@@ -1146,7 +1149,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -168.2, y: -37}
+  m_AnchoredPosition: {x: -208.21, y: 35.4}
   m_SizeDelta: {x: 223.6, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1191283120
@@ -1273,7 +1276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 190, y: 133}
+  m_AnchoredPosition: {x: -238.6, y: 207}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1218836141
@@ -1307,7 +1310,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "Money: \n"
 --- !u!222 &1218836142
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1350,7 +1353,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 190, y: 31}
+  m_AnchoredPosition: {x: 190, y: 157.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1508751905
@@ -1384,7 +1387,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'Raw Production:'
 --- !u!222 &1508751906
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1427,7 +1430,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 190, y: -121}
+  m_AnchoredPosition: {x: 190, y: 26.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618265678
@@ -1461,7 +1464,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'surplus
+
+'
 --- !u!222 &1618265679
 CanvasRenderer:
   m_ObjectHideFlags: 0
