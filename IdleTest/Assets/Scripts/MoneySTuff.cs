@@ -37,7 +37,7 @@ public class MoneySTuff : MonoBehaviour
     void Start()
     {
         GameManager.Instance.FarmPrice = 10;
-        GameManager.Instance.TruckPrice = 15;
+        GameManager.Instance.lTruckPrice = 15;
         GameManager.Instance.StorePrice = 44;
     }
 
@@ -114,10 +114,10 @@ public class MoneySTuff : MonoBehaviour
     }
     public void truckButton()
     {
-        if (GameManager.Instance.Money >= GameManager.Instance.TruckPrice)
+        if (GameManager.Instance.Money >= GameManager.Instance.lTruckPrice)
         {
             GameManager.Instance.LTrucks += 1;
-            GameManager.Instance.TruckPrice = (GameManager.Instance.TruckPrice * 1.1);
+            GameManager.Instance.lTruckPrice = (GameManager.Instance.lTruckPrice * 1.1);
         }
 
     }
